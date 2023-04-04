@@ -1,7 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+margin: 0;
+padding: 0;
+}
+
 .img1 {
-    background-image: url("..//images/pokemon-nature-pikachu-charmander-wallpaper-4664237548c040be06a0d9e164fe6dd4.jpg");
-    background-size: 100%;
-    /* background-position: 100%; */
+background-image: url("..//images/pokemon-nature-pikachu-charmander-wallpaper-4664237548c040be06a0d9e164fe6dd4.jpg");
+background-size: 100%;
+  /* background-position: 100%; */
 }
 
 /* .text-muted {
@@ -9,5 +18,11 @@
 } */
 
 .main-div {
-    display: flex;
+display: flex;
+}
+
+.cards {
+height: 50%;
+padding: 7px;
+width: 31% !important;
 }
