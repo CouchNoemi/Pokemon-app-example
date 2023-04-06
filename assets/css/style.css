@@ -1,9 +1,10 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&display=swap');
 
 .img1 {
-    background-image: url("..//images/pokemon-nature-pikachu-charmander-wallpaper-4664237548c040be06a0d9e164fe6dd4.jpg");
-    background-size: 100%;
-    /* background-position: 100%; */
+background-image: url("..//images/pokemon-nature-pikachu-charmander-wallpaper-4664237548c040be06a0d9e164fe6dd4.jpg");
+background-size: 100%;
+  /* background-position: 100%; */
 }
 
 /* .text-muted {
@@ -97,5 +98,3 @@ font-size:50px ;
     background-color: white;
     border-radius: 10px;
 }
-
-
