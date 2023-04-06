@@ -1,7 +1,7 @@
 let searchEl = document.getElementById("auto-complete");
 let searchBtn = document.getElementById("searchBtn");
 let dropItem = document.getElementById("dropItem");
-let dropDownBtn = document.getElementById("dropdownMenuButton1");
+let pokemonSelect = document.getElementById("pokemonSelect");
 
 var allPokemonData = [
   {
@@ -610,16 +610,15 @@ var allPokemonData = [
   },
 ];
 
-function getPokemons() {
+function setPokemonTypes() {
   allPokemonData.forEach((el) => {
-    //console.log(el.name);
-    var a = document.createElement("a");
-    a.textContent = el.name;
-    a.classList.add("dropdown-item");
-    a.href = "#";
-    dropDownBtn.appendChild(a);
+    var option = document.createElement("option"); // creating option element
+    option.textContent = el.name; // set text content of option element
+    option.value = el.name; // setting the value attribute of option element
+    pokemonSelect.appendChild(option); // add option element to pokemon select element
   });
 }
+setPokemonTypes();
 
 // function getAllPokemon () {
 //   let pokeName = searchEl.value;
@@ -648,8 +647,6 @@ function getPokemons() {
 //       console.log("error here", err);
 //     })
 // };
-getPokemons();
-//dropDownBtn.addEventListener("click", getPokemons);
 
 //getAllPokemon();
 /*

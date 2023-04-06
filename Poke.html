@@ -28,6 +28,7 @@
 
     <!--game section-->
     <section class="game-container">
+      <!--left container-->
       <div class="con1">
         <!--search-->
         <form class="form-inline my-lg-0">
@@ -40,26 +41,15 @@
         </form>
 
         <!--pokemon types-->
-        <div class="dropdown">
-          <button
-            class="btn btn-info dropdown-toggle w-100"
-            type="button"
-            id="dropdownMenuButton"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Pokemon Types
-          </button>
-          <div
-            style="height: 200px; overflow: scroll"
-            id="dropdownMenuButton1"
-            class="dropdown-menu w-100"
-            aria-labelledby="dropdownMenuButton"
-          >
-            <!--use js to fill it-->
-          </div>
-        </div>
+        <select
+          class="pokemon-types"
+          aria-label="Default select example"
+          id="pokemonSelect"
+        >
+          <option selected>Select pokemon types</option>
+          <option value="type 1">type 1</option>
+          <!--use js to fill it-->
+        </select>
 
         <!--favorite container-->
         <div class="favorite-container d-flex flex-column justify-content-end">
@@ -67,7 +57,24 @@
           <button type="button" class="btn btn-info w-100">Favorite</button>
         </div>
       </div>
-      <div class="con2 bg-warning"></div>
+      <!--right container-->
+      <div class="con2">
+        <div class="your-team">Your Team</div>
+        <div class="cards">
+          <div class="pokemon"></div>
+          <div class="pokemon"></div>
+          <div class="pokemon"></div>
+          <div class="pokemon"></div>
+          <div class="pokemon"></div>
+          <div class="pokemon"></div>
+          <div class="pokemon"></div>
+          <div class="pokemon"></div>
+          <div class="pokemon"></div>
+          <div class="pokemon"></div>
+          <div class="pokemon"></div>
+          <div class="pokemon"></div>
+        </div>
+      </div>
     </section>
 
     <script src="./assets/JavaScript/Script.js"></script>

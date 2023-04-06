@@ -31,6 +31,8 @@ font-size:50px ;
     gap:50px;
     padding:20px
 }
+
+/*left container*/
 .con1 {
     flex:0.3;
     padding:40px;
@@ -38,12 +40,7 @@ font-size:50px ;
     flex-direction: column;
     gap:20px;
     border-radius: 10px;
-    background-color: #17a3b888;;
-}
-.con2 {
-    flex:0.7;
-    padding:100px;
-    border-radius: 10px;
+    background-color: #17a3b888;
 }
 .favorite-container {
     height: 100%;
@@ -53,3 +50,52 @@ font-size:50px ;
     border-radius: 10px;
     padding: 20px;
 }
+.pokemon-types {
+    padding: 10px;
+    border-radius: 10px;
+    outline:none;
+}
+.d-menu {
+    height: 300px;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    border-radius: 10px;
+}
+
+
+/* right container  */
+.con2 {
+    flex:0.7;
+    padding:40px;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    border-radius: 10px;
+    background-color: #17a3b888;
+}
+.your-team {
+    text-align: center;
+    background-color: #17a3b888;
+    border-radius: 10px;
+    padding:10px;
+    color:white;
+    font-size: x-large;
+    font-weight: bold;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.pokemon {
+    width:200px;
+    height:200px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
