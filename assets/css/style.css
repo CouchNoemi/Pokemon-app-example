@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&display=swap');
+
 .img1 {
     background-image: url("..//images/pokemon-nature-pikachu-charmander-wallpaper-4664237548c040be06a0d9e164fe6dd4.jpg");
     background-size: 100%;
@@ -10,4 +12,14 @@
 
 .main-div {
     display: flex;
+}
+
+.logo {
+    width:80px;
+}
+.poke-trainer {
+    font-family: 'Bebas Neue', cursive;
+font-family: 'Permanent Marker', cursive;
+color:#FDD624;
+font-size:50px ;
 }
