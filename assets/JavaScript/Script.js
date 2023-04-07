@@ -2,36 +2,32 @@ let searchEl = document.getElementById("auto-complete");
 let searchBtn = document.getElementById("searchBtn");
 let dropItem = document.getElementById("dropItem");
 let pokemonSelect = document.getElementById("pokemonSelect");
-let allPokemonData = [];
-
-function getAllPokemonData() {
-  let results = fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
-    .then((res) => res.json())
-    .then((data) => {
-      return data.results;
-    })
-    .catch((err) => console.log(err));
-
-  return results;
-}
 
 const setPokemonTypes = async () => {
-  const pokemonData = await getAllPokemonData();
-  pokemonData.forEach((el) => {
-    allPokemonData.push(el);
-    var option = document.createElement("option"); // creating option element
-    option.textContent = el.name; // set text content of option element
-    option.value = el.name; // setting the value attribute of option element
-    pokemonSelect.appendChild(option); // add option element to pokemon select element
-  });
+  fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
+    .then((res) => res.json())
+    .then(({ results }) => {
+      results.forEach((el) => {
+        var option = document.createElement("option"); // creating option element
+        option.textContent = el.name; // set text content of option element
+        option.value = el.name; // setting the value attribute of option element
+        pokemonSelect.appendChild(option); // add option element to pokemon select element
+      });
+    })
+    .catch((err) => console.log(err));
 };
-
 setPokemonTypes();
 
 $(function () {
-  $("#auto-complete").autocomplete({
-    source: allPokemonData.map(({ name }) => name),
-  });
+  $.get(
+    "https://pokeapi.co/api/v2/pokemon?limit=151",
+    {},
+    function ({ results }) {
+      $("#auto-complete").autocomplete({
+        source: results.map(({ name }) => name),
+      });
+    }
+  );
 });
 /*
    <input
